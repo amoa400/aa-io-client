@@ -1,0 +1,19 @@
+{
+	"name": "aa-io-client",
+	"description": "a realtime communication library base on Engine.io-client (es6 style)",
+	"version": "0.1.0",
+	"author": "amoa400 <amoa400@163.com>",
+	"keywords": [
+		"aa-io-client",
+		"engine.io-client",
+		"socket"
+	],
+	"repository": "https://github.com/amoa400/aa-io-client",
+	"homepage": "http://www.amoa400.com",
+	"dependencies": {
+		"engine.io-client": "1.0.5",
+		"traceur": "0.0.33"
+	},
+	"main": "index.js",
+	"readme": "a realtime communication library base on Engine.io-client (es6 style)\n\nhomepage: https://github.com/amoa400/aa-io-client"
+}
