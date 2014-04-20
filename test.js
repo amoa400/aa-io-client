@@ -1,4 +1,4 @@
-var aaio = require('./index');
+var aaio = require('./lib/socket');
 var log = require('util').log;
 
 var client = new aaio('http://127.0.0.1:6678?token=123');

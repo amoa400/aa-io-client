@@ -1,0 +1,32 @@
+<div id="aaa"></div>
+
+<script src="./aa-io-client.js"></script>
+<script>
+
+
+var client = new aaio('http://127.0.0.1:6678?token=123');
+
+client.on('open', function() {
+  alert('connected to server on port 6678');
+});
+
+client.on('close', function() {
+  alert('connection has closed');
+});
+
+client.on('dead', function() {
+  alert('connection has dead');
+});
+
+client.on('message', function(message) {
+  document.getElementById('aaa').innerHTML += JSON.stringify(message) + '<br>';
+});
+
+var count = 0;
+var send = function() {
+  client.send({n: count++});
+}
+setInterval('send()', 1000);
+
+
+</script>
