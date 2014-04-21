@@ -1,7 +1,7 @@
 {
 	"name": "aa-io-client",
 	"description": "a realtime communication library base on Engine.io-client",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"author": "amoa400 <amoa400@163.com>",
 	"keywords": [
 		"aa-io-client",

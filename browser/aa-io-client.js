@@ -379,7 +379,6 @@ Socket.prototype.reconnect = function() {
  */
 Socket.prototype.onOpen = function() {
   this.emit('open');
-  this.times = 0;
   this.status = 'connected';
 
   // send cache message
@@ -394,7 +393,7 @@ Socket.prototype.onOpen = function() {
  *
  * @api private
  */
-Socket.prototype.onClose = function() {
+Socket.prototype.onClose = function(data, msg) {
   if (this.status == 'connected')
     this.emit('close');
   this.status = 'closed';
@@ -408,6 +407,8 @@ Socket.prototype.onClose = function() {
  * @api private
  */
 Socket.prototype.onMessage = function(data) {
+  this.times = 0;
+  
   // parse the data
   try {
     data = JSON.parse(data);
